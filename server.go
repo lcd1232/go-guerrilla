@@ -365,7 +365,7 @@ func (s *server) handleClient(client *client) {
 	defer client.closeConn()
 	sc := s.configStore.Load().(ServerConfig)
 	s.log().Infof("Handle client [%s], id: %d", client.RemoteIP, client.ID)
-	
+
 	// Initial greeting
 	var greeting string
 	if sc.Greeting != "" {
